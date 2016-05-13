@@ -13,5 +13,4 @@ Please note that these apps are under active development! We do expect things to
 https://beta.docker.com/docs/getting-started
 
 ## Download the app
-https://s3-us-west-1.amazonaws.com/app-beta-download/Docker.dmg
-
+https://dyhfha9j6srsj.cloudfront.net/Docker.dmg
