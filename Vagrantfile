@@ -5,7 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 $script = <<SCRIPT
 link="https://dyhfha9j6srsj.cloudfront.net/Docker.dmg"
-version="1.11.1-beta11"
+version="1.11.1-beta13.1"
 dmg="/vagrant/Docker-${version}.dmg"
 desktop="/Users/vagrant/Desktop/Docker-${version}.dmg"
 if [ ! -f "$dmg" ]; then
