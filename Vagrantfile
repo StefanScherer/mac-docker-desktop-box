@@ -4,8 +4,8 @@
 VAGRANTFILE_API_VERSION = "2"
 
 $script = <<SCRIPT
-link="https://download.docker.com/mac/beta/Docker.dmg"
-version="1.12.0-rc2-beta16"
+link="https://download.docker.com/mac/edge/Docker.dmg"
+version="17.12.0-ce-rc2-mac41"
 dmg="/vagrant/Docker-${version}.dmg"
 desktop="/Users/vagrant/Desktop/Docker-${version}.dmg"
 if [ ! -f "$dmg" ]; then
@@ -21,7 +21,7 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "osx1011-desktop"
+  config.vm.box = "osx1013-desktop"
 
   config.vm.provision "shell", inline: $script, privileged: false
 #  config.vm.provision "reload"
