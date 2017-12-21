@@ -5,7 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 $script = <<SCRIPT
 link="https://download.docker.com/mac/edge/Docker.dmg"
-version="17.12.0-ce-rc2-mac41"
+version="17.12.0-ce-rc4-mac44"
 dmg="/vagrant/Docker-${version}.dmg"
 desktop="/Users/vagrant/Desktop/Docker-${version}.dmg"
 if [ ! -f "$dmg" ]; then
@@ -24,13 +24,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "osx1013-desktop"
 
   config.vm.provision "shell", inline: $script, privileged: false
-#  config.vm.provision "reload"
 
   ["vmware_fusion", "vmware_workstation"].each do |provider|
     config.vm.provider provider do |v, override|
-      v.linked_clone = false
+      v.linked_clone = true
       v.gui = true
-      v.vmx["memsize"] = "4096"
+      v.vmx["memsize"] = "6144"
       v.vmx["numvcpus"] = "2"
       v.vmx["vhv.enable"] = "TRUE"
     end
@@ -43,6 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.vmx["gui.fullscreenatpoweron"] = "TRUE"
     v.vmx["gui.viewmodeatpoweron"] = "fullscreen"
     v.vmx["gui.lastPoweredViewMode"] = "fullscreen"
+    v.vmx["virtualHW.version"] = "14"
     v.enable_vmrun_ip_lookup = false
   end
 end
