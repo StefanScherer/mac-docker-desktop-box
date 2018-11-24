@@ -1,8 +1,8 @@
-# Docker for Mac Beta
+# Docker Desktop for Mac
 
-This is a Vagrant test environment to run the Docker for Mac Beta in a VMware
+This is a Vagrant test environment to run Docker Desktop for Mac in a VMware
 Fusion vagrant box. You need an OSX Vagrant box, eg. built with
-https://github.com/boxcutter/osx and VMware Fusion 10 and Vagrant 2.0.1. Or
+https://github.com/boxcutter/osx and VMware Fusion 11.0.1 and Vagrant 2.2.x. Or
 maybe one of the boxes at Altas
 https://atlas.hashicorp.com/boxes/search?utf8=✓&sort=&provider=&q=osx may help
 you skip the `packer build` step.
@@ -17,5 +17,4 @@ again.
 
 ## Getting started
 
-* https://beta.docker.com
-* https://docs.docker.com/docker-for-mac/kubernetes/
+* https://store.docker.com/editions/community/docker-ce-desktop-mac
