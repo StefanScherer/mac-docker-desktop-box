@@ -2,9 +2,8 @@
 
 This is a Vagrant test environment to run Docker Desktop for Mac in a VMware
 Fusion vagrant box. You need an OSX Vagrant box, eg. built with
-https://github.com/boxcutter/osx and VMware Fusion 11.0.1 and Vagrant 2.2.x. Or
-maybe one of the boxes at Altas
-https://atlas.hashicorp.com/boxes/search?utf8=✓&sort=&provider=&q=osx may help
+https://github.com/boxcutter/osx and VMware Fusion 11.0.3 and Vagrant 2.2.x. Or
+maybe one of the boxes in the Vagrant Cloud https://app.vagrantup.com/boxes/search?provider=vmware&q=macos&sort=downloads&utf8=%E2%9C%93 may help
 you skip the `packer build` step.
 
 ```
